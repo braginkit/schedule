@@ -1,0 +1,21 @@
+#ifndef EVENT_H
+#define EVENT_H
+#include <affair.h>
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+class Event : public Affair
+{
+private:
+    bool complete;
+public:
+    Event();
+    Event(const string, const int, const bool);
+    virtual ~Event() override;
+    void change_complete(const bool new_complete);
+    bool get_compete() const;
+    virtual bool class_type() const;
+};
+
+#endif // EVENT_H

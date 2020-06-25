@@ -1,0 +1,22 @@
+#include "event.h"
+
+Event::Event() : Affair()
+{
+    this->complete = false;
+}
+
+Event::Event(const string new_name, const int new_priority, const bool complete) : Affair(new_name, new_priority)
+{
+    this->complete = complete;
+}
+Event::~Event(){};
+
+void Event::change_complete(const bool new_complete)
+{
+    this->complete = new_complete;
+}
+
+bool Event::get_compete() const
+{
+    return this->complete;
+}
